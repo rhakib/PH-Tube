@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
     </header>
     <main>
-        <div class="w-[50%] mx-auto mt-20 space-y-4">
+        <div class="px-6 md:px-0 md:w-[70%] lg:w-[50%] mx-auto mt-20 space-y-4">
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">
@@ -44,20 +45,22 @@
                     <ul class="list-disc px-6 text-xl">
                         <li class="">Scope of let is block level. </li>
                         <li>
-                            Variables declared within curly braces can not be accessed from outside the respective scopes.
+                            Variables declared within curly braces can not be accessed from outside the respective
+                            scopes.
                         </li>
                         <li>
-                           We can not be re-declared multiple times using let keyword and same variable name.
+                            We can not be re-declared multiple times using let keyword and same variable name.
                         </li>
                     </ul>
                     <h3 class="text-2xl font-bold bg-yellow-200 w-[75px]">Const:</h3>
                     <ul class="list-disc px-6 text-xl">
-                        <li class="">Scope of const is also block level. Here block is confined to the curly braces ({ xxx }). </li>
+                        <li class="">Scope of const is also block level. Here block is confined to the curly braces ({
+                            xxx }). </li>
                         <li>
                             Value can not be updated once value is assigned to a const. But properties can be updated.
                         </li>
                         <li>
-                           We can not be re-declared multiple times using const keyword and same variable name.
+                            We can not be re-declared multiple times using const keyword and same variable name.
                         </li>
                     </ul>
                 </div>
@@ -69,34 +72,25 @@
                     </h3>
                 </div>
                 <div class="collapse-content space-y-4">
-                    <h3 class="text-2xl font-bold bg-yellow-200 w-12">Var:</h3>
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-14">Null:</h3>
                     <ul class="list-disc px-6 text-xl">
-                        <li class="">Scope of var is global or function level. Variable declared within a function has
-                            the function level scope otherwise global scope. </li>
+                        <li class="">Null means an empty or non-existent value. Null is assigned, and explicitly means
+                            nothing.</li>
                         <li>
-                            We can be re-declared multiple times using var key word and same variable name.
+                            Null indicates the intentional absence of a value.
                         </li>
                     </ul>
-                    <h3 class="text-2xl font-bold bg-yellow-200 w-12">Let:</h3>
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-32">Undefined:</h3>
                     <ul class="list-disc px-6 text-xl">
-                        <li class="">Scope of let is block level. </li>
                         <li>
-                            Variables declared within curly braces can not be accessed from outside the respective scopes.
+                            Undefined means a variable has been declared, but the value of that variable has not yet
+                            been defined.
                         </li>
                         <li>
-                           We can not be re-declared multiple times using let keyword and same variable name.
+                            Undefined indicate the unintentional absence of any object value.
                         </li>
                     </ul>
-                    <h3 class="text-2xl font-bold bg-yellow-200 w-[75px]">Const:</h3>
-                    <ul class="list-disc px-6 text-xl">
-                        <li class="">Scope of const is also block level. Here block is confined to the curly braces ({ xxx }). </li>
-                        <li>
-                            Value can not be updated once value is assigned to a const. But properties can be updated.
-                        </li>
-                        <li>
-                           We can not be re-declared multiple times using const keyword and same variable name.
-                        </li>
-                    </ul>
+
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
@@ -105,7 +99,14 @@
                     <h3 class="text-2xl font-bold">What do you mean by REST API?</h3>
                 </div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <ul class="list-disc px-6 text-xl">
+                        <li>There are many kinds of APIs. One of them is REST API.
+                            REST stands for 'representational state transfer' and is a particular kind of architectural
+                            style that APIs considered “RESTful” are constrained by and “conform to”.
+
+                            REST APIs are a very common and important type of API that uses HTTP protocol for data
+                            transmission. </li>
+                    </ul>
                 </div>
             </div>
 

@@ -2,59 +2,71 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link class="w-20" rel="shortcut icon" href="image/Logo.png" type="image/x-icon"> -->
-    <title>PH Tube</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link class="w-20" rel="shortcut icon" href="image/Logo.png" type="image/x-icon"> -->
+  <title>PH Tube</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @media only screen and (max-width: 400px) {
+      #btn-container button{
+        padding: 0 16px ;
+      }
+      #card-container{
+        margin-left: 24px;
+      }
+    }
+  </style>
 </head>
 
 <body class="max-w-7xl mx-auto">
-    <header class="w-full">
-        <div class="bg-base-100 justify-between flex w-[90%] mx-auto mt-10 items-center gap-5 md:flex-row flex-col">
-            <div class="">
-              <a href="./index.html"><img src="./image/Logo.png" alt="logo"></a>
-            </div>
-            <div class="md:mr-16">
-              <button id="sortBtn" class="btn bg-gray-300">Sort By View</button>
-            </div>
-            <div>
-                <a href="blog.html"><button class="bg-[#FF1F3D] px-4 py-2 rounded-md text-white">Blog</button></a>
-            </div>
-          </div>
+  <header class="w-full">
+    <div class="bg-base-100 justify-between flex w-[90%] mx-auto mt-10 items-center gap-5 md:flex-row flex-col">
+      <div class="">
+        <a href="./index.html"><img src="./image/Logo.png" alt="logo"></a>
+      </div>
+      <div class="md:mr-16">
+        <button id="sortBtn" class="btn bg-gray-300">Sort By View</button>
+      </div>
+      <div>
+        <a href="blog.html"><button class="bg-[#FF1F3D] px-4 py-2 rounded-md text-white">Blog</button></a>
+      </div>
+    </div>
 
-    </header>
-    <hr class="mt-7 w-[350px] md:w-[700px] lg:w-[1000px] mx-auto">
-    <main>
-        <!-- btn container  -->
-        <div id="btn-container" class="mt-8 m-auto text-center gap-3 flex justify-center">
- 
-        </div>
+  </header>
+  <hr class="mt-7 w-[350px] md:w-[700px] lg:w-[1000px] mx-auto">
+  <main>
+    <!-- btn container  -->
+    <div id="btn-container" class="mt-8 m-auto text-center gap-3 flex justify-center">
 
-        
-        
-        
-        <!-- card section  -->
-        <section class="">
-            <!--All cards -->
-            <div id="card-container" class=" ml-12 md:ml-10 lg:ml-0 my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-               
-
-            </div>
-          </section>
-          <div id="no-data" class=" flex lg:ml-16 items-center text-center justify-center">
-            
-              
-          </div>
-
-    </main>
-    <!-- <p class ="absolute top-96 left-48 bg-slate-400">`${ content.others.posted_date ? ${ hour } hrs ${ min }  : '' } `</p> -->
+    </div>
 
 
 
-    <script src="js/index.js"></script>
+
+    <!-- card section  -->
+    <section class="">
+      <!--All cards -->
+      <div id="card-container"
+        class=" ml-12 md:ml-10 lg:ml-0 my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+
+      </div>
+    </section>
+    <div id="no-data" class=" flex lg:ml-16 items-center text-center justify-center">
+
+
+    </div>
+
+  </main>
+  <!-- <p class ="absolute top-96 left-48 bg-slate-400">`${ content.others.posted_date ? ${ hour } hrs ${ min }  : '' } `</p> -->
+
+
+
+  <script src="js/index.js"></script>
 </body>
 
 </html>

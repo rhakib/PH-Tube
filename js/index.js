@@ -1,12 +1,13 @@
 // fetch category
+let globalData;
 const loadContent = async () => {
   const response = await fetch('https://openapi.programming-hero.com/api/videos/categories');
   const data = await response.json();
-  // console.log(data);
+ 
 
   const btnContainer = document.getElementById('btn-container');
   const btnAll = data.data;
-  // console.log(btnAll); 
+  
   btnAll.forEach(btn => {
     const divBtn = document.createElement('div');
     divBtn.innerHTML = `
@@ -19,29 +20,61 @@ const loadContent = async () => {
 
 
 
-const handleLoadContent = async (id = '1000') => {
+const handleLoadContent = async (id = "1000") => {
   const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${id}`)
   const data = await response.json();
-  console.log(data);
+  
+
+  globalData = data.data; 
+  sortByView(data);
 
 
-  const allContent = data.data;
-  sortByView(allContent)
-  // console.log(allContent);
-  if (allContent.length > 0) {
+}
 
 
+function sortByView(data) {
+
+  if (data.data.length === 0) {
+    
+    const noDataContainer = document.getElementById("no-data");
     const cardContainer = document.getElementById('card-container');
+    cardContainer.textContent = ' ';
+    noDataContainer.textContent = ' ';
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <img class="ml-24 mb-4" src="./image/Icon.png" alt="">
+    <h2 class="text-3xl font-bold">Oops!! Sorry, There is no <br>
+     content here</h2>
+
+    `
+    noDataContainer.appendChild(div);
+
+  }
+  else {
+ 
+  const cardContainer = document.getElementById('card-container');
     cardContainer.textContent = ' ';
     const noDataContainer = document.getElementById("no-data");
     noDataContainer.textContent = ' ';
-    allContent.forEach(content => {
-      // console.log(content);
+    data.data.forEach(content => {
+      
+      const postedTime = content.others.posted_date;
+      const postedTimeInt = parseInt(postedTime)
+      const hour = Math.floor(postedTimeInt / 3600);
+      const remainingTime = postedTimeInt % 3600;
+      const min = Math.floor(remainingTime / 60);
+     
       const divContent = document.createElement('div');
       divContent.innerHTML = `
         <div class="">
-           <figure><img class = "h-[220px] w-[350px] rounded-md" src="${content.thumbnail}" alt="content" /></figure>
-            <div class="flex mt-6 gap-4">
+           <div class = "relative">
+                <figure><img class = "relative h-[220px] w-[320px] rounded-md" src="${content.thumbnail}" alt="content" /></figure>
+                <p class="absolute top-44 px-2 rounded-sm left-36 opacity-80 text-white bg-black">
+                ${postedTime ? `${hour} Hrs ${min} Min ago` : ""}</p>
+           </div>
+                
+                 
+           <div class="flex mt-6 gap-4">
             <div>
               <img class="w-[40px] h-[40px] rounded-[50%]" src="${content.authors[0].profile_picture}" alt="">
             </div>
@@ -59,48 +92,24 @@ const handleLoadContent = async (id = '1000') => {
         `
       cardContainer.appendChild(divContent);
 
-
-
     })
-
-  } else {
-    const noDataContainer = document.getElementById("no-data");
-    const cardContainer = document.getElementById('card-container');
-    cardContainer.textContent = ' ';
-    noDataContainer.textContent = ' ';
-    const div = document.createElement('div');
-    div.innerHTML = `
-    <img class="ml-24 mb-4" src="./image/Icon.png" alt="">
-    <h2 class="text-3xl font-bold">Oops!! Sorry, There is no <br>
-     content here</h2>
-
-    `
-    noDataContainer.appendChild(div);
-
-
-  }
-
-
+  
+}
 }
 
-function sortByView(allContent) {
+document.getElementById('sortBtn').addEventListener('click', () =>{
+   sortData()
+})
+const sortData = () => {
   
-  let viewsArr = [];
+  globalData.sort(
+    (a, b) =>
+      parseFloat(b.others.views.split("K")[0]) -
+      parseFloat(a.others.views.split("K")[0])
+  );
+  sortByView({ data:globalData });
   
-    allContent.forEach(content => {
-    const viewsCount = parseFloat(content.others.views);
-    viewsArr.push(viewsCount);
-    const sortedViews = viewsArr.sort((a, b) => b - a);
-    
-
-
-  });
-  console.log(viewsArr);
-  // console.log(sortedViews);
-  // console.log('sortByView', allContent);
-
-}
-
+};
 
 
 

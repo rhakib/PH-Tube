@@ -10,15 +10,56 @@
 </head>
 
 <body>
+    <header class="w-full">
+        <div class="bg-base-100 justify-between flex w-[90%] mx-auto mt-10 items-center gap-5 md:flex-row flex-col">
+            <div class="">
+                <a href="./index.html"><img src="./image/Logo.png" alt="logo"></a>
+            </div>
+            <div class="mr-16">
+                <a href="./index.html"><button class="btn bg-gray-300">Watch Videos</button></a>
+            </div>
+            <div>
+                <a href="blog.html"><button class="bg-[#FF1F3D] px-4 py-2 rounded-md text-white">Blog</button></a>
+            </div>
+        </div>
+
+    </header>
     <main>
         <div class="w-[50%] mx-auto mt-20 space-y-4">
             <div class="collapse collapse-arrow bg-base-200">
-                <input type="radio" name="my-accordion-2" checked="checked" />
+                <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">
                     <h3 class="text-2xl font-bold">Discuss the scope of var, let, and const</h3>
                 </div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-content space-y-4">
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-12">Var:</h3>
+                    <ul class="list-disc px-6 text-xl">
+                        <li class="">Scope of var is global or function level. Variable declared within a function has
+                            the function level scope otherwise global scope. </li>
+                        <li>
+                            We can be re-declared multiple times using var key word and same variable name.
+                        </li>
+                    </ul>
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-12">Let:</h3>
+                    <ul class="list-disc px-6 text-xl">
+                        <li class="">Scope of let is block level. </li>
+                        <li>
+                            Variables declared within curly braces can not be accessed from outside the respective scopes.
+                        </li>
+                        <li>
+                           We can not be re-declared multiple times using let keyword and same variable name.
+                        </li>
+                    </ul>
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-[75px]">Const:</h3>
+                    <ul class="list-disc px-6 text-xl">
+                        <li class="">Scope of const is also block level. Here block is confined to the curly braces ({ xxx }). </li>
+                        <li>
+                            Value can not be updated once value is assigned to a const. But properties can be updated.
+                        </li>
+                        <li>
+                           We can not be re-declared multiple times using const keyword and same variable name.
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
@@ -27,8 +68,35 @@
                     <h3 class="text-2xl font-bold">Tell us the use cases of null and undefined
                     </h3>
                 </div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-content space-y-4">
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-12">Var:</h3>
+                    <ul class="list-disc px-6 text-xl">
+                        <li class="">Scope of var is global or function level. Variable declared within a function has
+                            the function level scope otherwise global scope. </li>
+                        <li>
+                            We can be re-declared multiple times using var key word and same variable name.
+                        </li>
+                    </ul>
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-12">Let:</h3>
+                    <ul class="list-disc px-6 text-xl">
+                        <li class="">Scope of let is block level. </li>
+                        <li>
+                            Variables declared within curly braces can not be accessed from outside the respective scopes.
+                        </li>
+                        <li>
+                           We can not be re-declared multiple times using let keyword and same variable name.
+                        </li>
+                    </ul>
+                    <h3 class="text-2xl font-bold bg-yellow-200 w-[75px]">Const:</h3>
+                    <ul class="list-disc px-6 text-xl">
+                        <li class="">Scope of const is also block level. Here block is confined to the curly braces ({ xxx }). </li>
+                        <li>
+                            Value can not be updated once value is assigned to a const. But properties can be updated.
+                        </li>
+                        <li>
+                           We can not be re-declared multiple times using const keyword and same variable name.
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">

@@ -10,14 +10,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="max-w-7xl mx-auto">
     <header class="w-full">
         <div class="bg-base-100 justify-between flex w-[90%] mx-auto mt-10 items-center gap-5 md:flex-row flex-col">
             <div class="">
-              <img src="./image/Logo.png" alt="logo">
+              <a href="./index.html"><img src="./image/Logo.png" alt="logo"></a>
             </div>
-            <div class="mr-16">
-              <button onclick="sortByView()" class="btn bg-gray-300">Sort By View</button>
+            <div class="md:mr-16">
+              <button id="sortBtn" class="btn bg-gray-300">Sort By View</button>
             </div>
             <div>
                 <a href="blog.html"><button class="bg-[#FF1F3D] px-4 py-2 rounded-md text-white">Blog</button></a>
@@ -25,41 +25,32 @@
           </div>
 
     </header>
+    <hr class="mt-7 w-[350px] md:w-[1200px] mx-auto">
     <main>
         <!-- btn container  -->
-        <div id="btn-container" class="mt-12 m-auto text-center gap-3 flex justify-center">
+        <div id="btn-container" class="mt-8 m-auto text-center gap-3 flex justify-center">
  
         </div>
+
+        
         
         
         <!-- card section  -->
         <section class="">
             <!--All cards -->
-            <div id="card-container" class="container w-full mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div id="card-container" class=" ml-12 md:ml-10 lg:ml-0 my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- <div class="">
-                    <figure><img src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="content" /></figure>
-                    <div class="card-body flex">
-                      <div>
-                        <img class="w-[100%] h-[100%] rounded-[50%]" src="" alt="">
-                      </div>
-                      <div>
-                           <h5></h5>
-                           <p></p>
-                           <p></p>
-                      </div>
-                    </div>
-                  </div> -->
+               
 
             </div>
           </section>
-          <div id="no-data" class="flex lg:ml-16 items-center text-center justify-center">
+          <div id="no-data" class=" flex lg:ml-16 items-center text-center justify-center">
             
               
           </div>
 
     </main>
-
+    <!-- <p class ="absolute top-96 left-48 bg-slate-400">`${ content.others.posted_date ? ${ hour } hrs ${ min }  : '' } `</p> -->
 
 
 
